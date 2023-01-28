@@ -8,6 +8,10 @@ body {
   font-size: 3rem;
   margin: 5%;
   color: #bcccb6;
+  
+}
+.click-me{
+  cursor: pointer;
 }
 
 h3 {
@@ -34,6 +38,9 @@ h3 {
   width: 200px;
   border: 10px solid black;
   border-radius: 20%;
+  cursor: pointer;
+  color: transparent;
+  text-shadow: 0 0 0 #2196f3;
 }
 
 .game-over {
@@ -62,6 +69,11 @@ h3 {
   background-color: rgb(255, 255, 255);
 }
 
+.settings{
+  color: white;
+  cursor: pointer;
+}
+
 @media (max-width: 1120px){
 
   h1{
@@ -72,7 +84,7 @@ h3 {
     display: block;
     width: 80%;
     margin: auto;
-  
+    
   }
   
 
@@ -84,5 +96,18 @@ h3 {
     border: 5px solid black;
     
   }
+}
+
+
+button{
+  background: none;
+  border-radius: 20%;
+  border: solid black;
+  padding: 1%;
+  font-size: 0.8rem;
+  font-family: 'Press Start 2P', cursive;
+  color: white ;
+  margin: 2rem;
+  cursor: pointer;
 }
 

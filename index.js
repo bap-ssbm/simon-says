@@ -4,6 +4,8 @@ var userPattern = [];
 //to start the game when a is pressed
 var level = 0;
 var gameStarted = false;
+var soundSet = true;
+var flash = true;
 
 // function for the next button coming adds it to the game pattern as well
 function nextSequence(){
@@ -23,8 +25,11 @@ function nextSequence(){
     var randomColorClass = "." + chosenColor;
     $(randomColorClass).fadeOut(100).fadeIn(100);
 
+    if(soundSet){
+        playSound(chosenColor);
+    }
+    
 
-    playSound(chosenColor);
     
 
 }
@@ -38,7 +43,12 @@ $(".btn").click(function(){
     userPattern.push(userColor);
     
 
-    playSound(userColor);
+    
+    if(soundSet){
+        playSound(userColor);
+    }
+
+
     animatePress(userColor);
 
     //uses .length because we want to target each of the objects inside the gamePattern Array along side the userPattern
@@ -68,7 +78,7 @@ $(document).keypress(function(event){
     if( event.key === "a" && !gameStarted){
 
         userPattern = [];
-
+        $('h1').removeClass("click-me");
         nextSequence();
         gameStarted = true;
     }
@@ -78,9 +88,9 @@ $('#level-title').click(function(){
 
     console.log();
     if( !gameStarted){
-
+        
         userPattern = [];
-
+        $('h1').removeClass("click-me");
         nextSequence();
         gameStarted = true;
     }
@@ -107,12 +117,15 @@ function checkAnswer(currentLevel){
     else{
 
         //for when user gets pattern wrong
-
+        $('h1').addClass("click-me");
         console.log("wrong");
-        $('body').addClass("game-over");
-        setTimeout(function() {
-        $('body').removeClass("game-over");
-        }, 200);
+        if(flash){
+            $('body').addClass("game-over");
+            setTimeout(function() {
+            $('body').removeClass("game-over");
+            }, 200);
+        }
+        
         $('h1').text("Game Over, Press Any Key or click me to Restart");
 
 
@@ -137,3 +150,29 @@ function startOver(){
     
     
 }
+
+//setting button
+
+$('.sound-setting').click(function(){
+    if(soundSet){
+        soundSet = false;
+        $('.sound-setting').text("turn sound on");
+    }
+    else if(!soundSet){
+        soundSet = true;
+        $('.sound-setting').text("turn sound off");
+    }
+    
+})
+
+$('.ani-setting').click(function(){
+    if(flash){
+        flash = false;
+        $('.ani-setting').text("turn flash on");
+    }
+    else if(!flash){
+        flash = true;
+        $('.ani-setting').text("turn flash off");
+    }
+    
+})

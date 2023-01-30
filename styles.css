@@ -1,22 +1,39 @@
 body {
   text-align: center;
-  background-color: #4d1a49;
+  background-color: #0e3133b0;
+  margin: 0;
 }
-
-#level-title {
-  font-family: 'Press Start 2P', cursive;
-  font-size: 3rem;
-  margin: 5%;
-  color: white;
+.logo{
+  position: absolute;
+  font-size: 5vw;
+  top: 2px;
+  margin: 0px;
   
 }
+#level-title {
+  font-family: 'Exo 2', sans-serif;
+  font-size: 3rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  
+  margin: 20px auto;
+  margin-bottom: 5%;
+  border-radius: 5px;
+  padding: 20px;
+  color: rgb(255, 241, 241);
+  width: 60%;
+  box-shadow: 0px 5px rgba(0, 0, 0, 0.9);
+  
+}
+/* .level-title-hr{
+  margin-bottom: 30px;
+} */
 .click-me{
   cursor: pointer;
 }
 
 h3 {
 
-  font-family: 'Press Start 2P', cursive;
+  font-family: 'Exo 2', sans-serif;
   font-size: 1rem;
   margin: 5%;
   color: #bcccb6;
@@ -31,37 +48,63 @@ h3 {
 
 }
 
+.btn-row{
+  background-color: #ffffff5d;
+  border: 2px solid;
+  border-radius: 5%;
+  width: fit-content;
+  margin: 20px auto;
+  box-shadow: 0px 5px rgba(0, 0, 0, 0.575);
+}
+
 .btn {
   margin: 25px;
   display: inline-block;
-  height: 200px;
-  width: 200px;
-  border: 10px solid black;
+  height: 150px;
+  width: 150px;
+  border: 10px solid rgba(0, 0, 0, 0.452);
   border-radius: 20%;
   cursor: pointer;
   color: transparent;
   text-shadow: 0 0 0 #2196f3;
+  
 }
 
 .game-over {
   background-color: rgb(0, 0, 0);
-  opacity: 0.8;
+  opacity: 0.5;
 }
 
 .red {
-  background-color: rgb(146, 47, 101);
+  background-color: rgb(146, 47, 102);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-color: rgb(114, 50, 66);
+  background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/3abbfa18-0a1a-4632-8438-d129a729b1d8/dfk5zws-0986565d-421b-4184-b1f6-880e3f30f2dd.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzNhYmJmYTE4LTBhMWEtNDYzMi04NDM4LWQxMjlhNzI5YjFkOFwvZGZrNXp3cy0wOTg2NTY1ZC00MjFiLTQxODQtYjFmNi04ODBlM2YzMGYyZGQucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.00dMP-Tz5cE87Kr6KMMrD3DpEsctDpUQOYtF7z7fOrg");
 }
 
 .green {
-  background-color: rgb(88, 190, 88);
+  background-color: rgb(51, 170, 51);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-color: rgb(64, 134, 64);
+  background-image: url("https://i.pinimg.com/originals/9d/26/96/9d269690f431dedc15c29bfa7cbc3c98.png");
+  
 }
-
 .blue {
   background-color: rgb(67, 67, 167);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-color: rgb(57, 57, 107);
+  background-image: url("https://img.freepik.com/premium-vector/cute-cat-head-pixel-art-style_475147-1418.jpg?w=2000");
 }
 
 .yellow {
   background-color: rgb(250, 229, 110);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-color: rgb(131, 120, 61);
+  background-image: url("https://www.shutterstock.com/image-illustration/pixel-dog-corgi-illustration-yellow-260nw-1849369564.jpg");
 }
 
 .pressed {
@@ -72,24 +115,62 @@ h3 {
 .settings{
   color: white;
   cursor: pointer;
+  
+}
+button{
+  background: rgba(0,0,0,0.5);
+  border-radius: 10%;
+  border: solid 1px black;
+  padding: 20px;
+  font-size: 1.7rem;
+  font-weight: 600;
+  font-family: 'Exo 2', sans-serif;
+  color: white ;
+  margin: 2rem;
+  cursor: pointer;
+  box-shadow: 0px 5px rgba(0, 0, 0, 0.9);
+}
+
+@media (min-width:1120px) {
+  .settings{
+    position: absolute;
+    right: 10%;
+    top: 20%;
+  }
+  .sound-setting{
+    display: block;
+    width: 150px;
+  }
+  .ani-setting{
+    display: block;
+    width: 150px;
+  }
+
 }
 /* level - tracker */
 .level-tracker{
   position: absolute;
   left: 50px;
   top: 20%;
-  font-family: 'Press Start 2P', cursive;
+  font-family: 'Exo 2', sans-serif;
   width: 15%;
   color: white;
-  font-size: 1rem;
-
+  font-size: 1.5rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  box-shadow: 0px 5px rgba(0, 0, 0, 0.9);
 }
 .level-track{
   margin: 29px 0px;
+  
 }
 ul {
   list-style-type: none;
   text-align: left;
+  position: relative;
+
+  letter-spacing: 5px;
+  font-size: 1.5rem;
 }
 
 @media (max-width: 1120px){
@@ -100,7 +181,7 @@ ul {
 
   .container {
     display: block;
-    width: 80%;
+    width: fit-content;
     margin: auto;
     
   }
@@ -111,7 +192,7 @@ ul {
     display: inline-block;
     height: 100px;
     width: 100px;
-    border: 5px solid black;
+    
     
   }
   .level-tracker{
@@ -127,15 +208,4 @@ ul {
 }
 
 
-button{
-  background: none;
-  border-radius: 20%;
-  border: solid black;
-  padding: 1%;
-  font-size: 0.8rem;
-  font-family: 'Press Start 2P', cursive;
-  color: white ;
-  margin: 2rem;
-  cursor: pointer;
-}
 

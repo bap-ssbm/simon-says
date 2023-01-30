@@ -40,7 +40,7 @@ function nextSequence(){
 
 // function to play animation and play sound based on user click and add it to the array of user
 $(".btn").click(function(){ 
-
+    if( gameStarted){
     var userColor = $(this).attr("id");
    
     userPattern.push(userColor);
@@ -58,6 +58,13 @@ $(".btn").click(function(){
 
     //uses .length because we want to target each of the objects inside the gamePattern Array along side the userPattern
     checkAnswer(userPattern.length - 1);
+    }
+    else if(!gameStarted){
+        userPattern = [];
+        $('h1').removeClass("click-me");
+        nextSequence();
+        gameStarted = true;
+    }
  });
 
 // to play sound 

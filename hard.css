@@ -1,0 +1,77 @@
+@media (min-width:1120px) {
+    .settings{
+      position: absolute;
+      right: 2%;
+      top: 20%;
+    }
+  
+}
+.level-tracker{
+    
+    left: 2%;
+    
+}
+.navbar{
+    margin-left: 2%;
+}
+  
+
+
+.red {
+    background-color: rgb(146, 47, 102);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-color: rgb(114, 50, 66);
+    
+  }
+  
+  .green {
+    background-color: rgb(23, 83, 23);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-color: rgb(50, 117, 50);
+    background-image: ;
+    
+    
+  }
+  .blue {
+    background-color: rgb(67, 67, 167);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-color: rgb(57, 57, 107);
+    
+  }
+  
+  .yellow {
+    background-color: rgb(250, 229, 110);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-color: rgb(131, 120, 61);
+    
+  }
+
+  .white{
+    background-color: rgb(230, 230, 230);
+  }
+
+  .cyan{
+    background-color: cyan;
+  }
+
+  .purple{
+    background-color: rgb(141, 53, 141);
+  }
+  .black{
+    background-color: rgb(85, 85, 85);
+  }
+
+  .orange{
+    background-color: rgb(255, 153, 0);
+  }
+
+  @media (max-width:446px){
+    .btn{
+        width: 60px;
+        height: 60px;
+    }
+  }

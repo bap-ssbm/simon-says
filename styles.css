@@ -7,7 +7,7 @@ body {
   font-family: 'Press Start 2P', cursive;
   font-size: 3rem;
   margin: 5%;
-  color: #bcccb6;
+  color: white;
   
 }
 .click-me{
@@ -49,7 +49,7 @@ h3 {
 }
 
 .red {
-  background-color: rgb(209, 87, 128);
+  background-color: rgb(146, 47, 101);
 }
 
 .green {
@@ -73,6 +73,24 @@ h3 {
   color: white;
   cursor: pointer;
 }
+/* level - tracker */
+.level-tracker{
+  position: absolute;
+  left: 50px;
+  top: 20%;
+  font-family: 'Press Start 2P', cursive;
+  width: 15%;
+  color: white;
+  font-size: 1rem;
+
+}
+.level-track{
+  margin: 29px 0px;
+}
+ul {
+  list-style-type: none;
+  text-align: left;
+}
 
 @media (max-width: 1120px){
 
@@ -95,6 +113,16 @@ h3 {
     width: 100px;
     border: 5px solid black;
     
+  }
+  .level-tracker{
+    position: static;
+    width: 100%;
+    margin: 0px auto;
+    
+  }
+
+  hr{
+    width: 100%;
   }
 }
 

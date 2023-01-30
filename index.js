@@ -7,6 +7,9 @@ var gameStarted = false;
 var soundSet = true;
 var flash = true;
 
+
+var playTime = 1;
+
 // function for the next button coming adds it to the game pattern as well
 function nextSequence(){
     //had the longest time , figuring out that the reason, why it kept bugging out after it made a new game and losing instanlty
@@ -39,8 +42,10 @@ function nextSequence(){
 $(".btn").click(function(){ 
 
     var userColor = $(this).attr("id");
-    
+   
     userPattern.push(userColor);
+    
+    
     
 
     
@@ -125,7 +130,12 @@ function checkAnswer(currentLevel){
             $('body').removeClass("game-over");
             }, 200);
         }
-        
+        if( gameStarted){
+            
+            var levelReached = "<li class='level-track'>" + playTime +") level " + (gamePattern.length -1)  + "</li>";
+            $('.levels-reached').append(levelReached);
+            playTime++;
+        }
         $('h1').text("Game Over, Press Any Key or click me to Restart");
 
 
